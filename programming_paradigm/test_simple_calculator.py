@@ -6,11 +6,11 @@ class TestSimpleCalculator(unittest.TestCase):
     def setUp(self):
         self.calc = SimpleCalculator()
 
-    def test_add(self):
+    def test_addition(self):
         self.assertEqual(self.calc.add(3, 4), 7)
         self.assertEqual(self.calc.add(-1, 1), 0)
 
-    def test_subtract(self):
+    def test_subtraction(self):
         self.assertEqual(self.calc.subtract(10, 5), 5)
         self.assertEqual(self.calc.subtract(0, 5), -5)
 
@@ -20,7 +20,7 @@ class TestSimpleCalculator(unittest.TestCase):
 
     def test_divide(self):
         self.assertEqual(self.calc.divide(10, 2), 5)
-        self.assertIsNone(self.calc.divide(5, 0))
+        self.assertIsNone(self.calc.divide(5, 0))  # divide by zero case
 
 if __name__ == '__main__':
     unittest.main()
